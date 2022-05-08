@@ -1,0 +1,7 @@
+config BR2_PACKAGE_ADVANCEMAME
+	bool "advancemame"
+	depends on BR2_PACKAGE_RPI_USERLAND
+	depends on BR2_PACKAGE_ALSA_LIB
+	help
+	  A MAME 0.106-based emulator
+	  http://www.advancemame.it
