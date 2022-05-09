@@ -1510,8 +1510,8 @@ adv_error advance_video_init(struct advance_video_context* context, adv_conf* cf
 	conf_bool_register_default(cfg_context, "display_scanlines", 0);
 	conf_bool_register_default(cfg_context, "display_vsync", 1);
 	conf_bool_register_default(cfg_context, "display_buffer", 0);
-	conf_int_register_enum_default(cfg_context, "display_resize", conf_enum(OPTION_RESIZE), STRETCH_FRACTIONAL_XY);
-	conf_int_register_enum_default(cfg_context, "display_magnify", conf_enum(OPTION_MAGNIFY), 0);
+	conf_int_register_enum_default(cfg_context, "display_resize", conf_enum(OPTION_RESIZE), STRETCH_NONE);
+	conf_int_register_enum_default(cfg_context, "display_magnify", conf_enum(OPTION_MAGNIFY), 1);
 	conf_int_register_default(cfg_context, "display_magnifysize", 640);
 	conf_int_register_enum_default(cfg_context, "display_adjust", conf_enum(OPTION_ADJUST), ADJUST_NONE);
 	conf_string_register_default(cfg_context, "display_skiplines", "auto");
@@ -1521,7 +1521,7 @@ adv_error advance_video_init(struct advance_video_context* context, adv_conf* cf
 	conf_bool_register_default(cfg_context, "display_rol", 0);
 	conf_bool_register_default(cfg_context, "display_flipx", 0);
 	conf_bool_register_default(cfg_context, "display_flipy", 0);
-	conf_int_register_enum_default(cfg_context, "display_resizeeffect", conf_enum(OPTION_RESIZEEFFECT), COMBINE_AUTO);
+	conf_int_register_enum_default(cfg_context, "display_resizeeffect", conf_enum(OPTION_RESIZEEFFECT), COMBINE_NONE);
 	conf_int_register_enum_default(cfg_context, "display_rgbeffect", conf_enum(OPTION_RGBEFFECT), EFFECT_NONE);
 	conf_int_register_enum_default(cfg_context, "display_interlaceeffect", conf_enum(OPTION_INTERLACEEFFECT), EFFECT_NONE);
 	conf_string_register_default(cfg_context, "sync_fps", "auto");
